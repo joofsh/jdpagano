@@ -1,0 +1,12 @@
+.body-content
+  .row
+    .col-lg-3
+      %h2 JD Pagano
+      %h4 Software Engineer
+      %h6 Passionate Coder and Entrepreneur
+    .col-lg-9
+      - @articles.each do |a|
+        .article-title
+          %h2.well.well-sm= a.title
+        .article-body= a.body.html_safe
+
