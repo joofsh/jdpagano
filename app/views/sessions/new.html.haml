@@ -1,11 +1,9 @@
 .container
   %h1 Login
-  = form_tag sessions_path do
-    .row
+  = form_tag sessions_path, class: 'form-inline' do
+    .form-group
       = label_tag :email
       = text_field_tag :email
-    .row
       = label_tag :password
       = password_field_tag :password
-    .row
       = submit_tag "Log In", class: 'btn btn-success'
