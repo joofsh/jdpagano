@@ -1,0 +1,28 @@
+.body-content
+  .row
+    .col-lg-3
+      %h2 JD Pagano
+      %h4 Software Engineer
+      %h6 Passionate Coder and Entrepreneur
+      .container.social-links
+        .row
+          .col-lg-4.col-lg-offset-1
+            %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
+              %i.icon-envelope.icon-3x
+          .col-lg-4
+            %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
+              %i.icon-github-alt.icon-3x
+        .row
+          .col-lg-4.col-lg-offset-1
+            %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
+              %i.icon-linkedin.icon-3x
+          .col-lg-4
+            %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
+              %i.icon-twitter.icon-3x
+
+    .col-lg-9
+      - @articles.each do |a|
+        .article-title
+          %h2.well.well-sm= a.title
+        .article-body= a.body.html_safe
+

@@ -1,12 +1,24 @@
-.body-content
+.container
+  - if flash[:notice]
+    = flash[:notice]
+
   .row
-    .col-lg-3
-      %h2 JD Pagano
-      %h4 Software Engineer
-      %h6 Passionate Coder and Entrepreneur
-    .col-lg-9
+    %h1 Articles
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Title
+        %th Body
+        %th Date
+
+    %tbody
       - @articles.each do |a|
-        .article-title
-          %h2.well.well-sm= a.title
-        .article-body= a.body.html_safe
+        %tr
+          %td= a.title
+          %td= a.body[0..100]
+          %td= a.created_at
+          %td= link_to "Edit", edit_article_path(a.id)
+          %td= link_to "Destroy", article_path(a.id)
+
+
 

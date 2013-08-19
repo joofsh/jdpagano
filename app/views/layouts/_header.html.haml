@@ -1,5 +1,5 @@
-.navbar.navbar-inverse
-  .container
-    .navbar-header
-      %a.navbar-brand JD Pagano
+- if current_user
+  .navbar.navbar-inverse
+    .pull-right
+      %p= current_user.name
 
