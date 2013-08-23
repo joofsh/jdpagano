@@ -4,4 +4,10 @@ class Article
 
   field :title, type: String
   field :body, type: String
+  field :image, type: String
+
+
+  def printable_post_date
+    created_at.strftime("%m/%d/%y")
+  end
 end
