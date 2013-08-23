@@ -1,19 +1,15 @@
 @import 'font-awesome';
-.navbar {
-  p {
-    color: white;
-  }
-}
-.article-title {
-  h2 {
-    display: inline-block;
-  }
-}
 
-a {
-  text-decoration: none !important;
+body {
+  padding-top: 60px;
 }
-
-ul, li {
-  list-style: none;
+.brand {
+  h6 {
+    font-size: 23px;
+    margin: 0 auto;
+  }
+  img {
+    width: 35px;
+    margin-right: 5px;
+  }
 }
