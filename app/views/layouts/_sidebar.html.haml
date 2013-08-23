@@ -1,0 +1,33 @@
+/ /////SIDEBAR/////
+.span4.sidebar
+  %h6 Software Engineer
+  %h4 Passionate Coder and Entrepreneur
+  .row-fluid
+    .span5.offset2
+      %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
+        %i.icon-envelope.icon-3x
+    .span5
+      %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
+        %i.icon-github-alt.icon-3x
+  .row-fluid
+    .span5.offset2
+      %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
+        %i.icon-linkedin.icon-3x
+    .span5
+      %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
+        %i.icon-twitter.icon-3x
+
+  / Popular Posts
+  %h4.title-bg Latest Posts
+  %ul.popular-posts
+    - @articles[0..2].each do |a|
+      %li
+        - if a.image
+          = image_tag a.image
+        - else
+          = image_tag 'grey-whale.png'
+        %p
+          = link_to a.body[0..100], article_path(a)
+        %em
+          = "Posted on #{a.printable_post_date}"
+

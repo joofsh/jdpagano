@@ -6,39 +6,29 @@
         %span.icon-bar
         %span.icon-bar
       %a.brand{:href => "/"}
-        %img{:alt => "MAXIMUM", :src => "/assets/template/logosmall.png"}/
+        %h6.pull-left JD Pagano
       .nav-collapse.collapse
         %ul.nav.pull-right
+          -#%li.dropdown
+            -#%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              -#About Me
+              -#%b.caret
+            -#%ul.dropdown-menu
+              -#%li
+                -#%a{:href => "blog.html"} Blog Classic
+              -#%li
+                -#%a{:href => "blog2.html"} Blog Variation
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-              Blog
-              %b.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "blog.html"} Blog Classic
-              %li
-                %a{:href => "blog2.html"} Blog Variation
-              %li
-                %a{:href => "blog3.html"} Blog Variation 2
-              %li
-                %a{:href => "blog4.html"} Blog Variation 3
-              %li
-                %a{:href => "blog5.html"} Single Post Right Sidebar
-              %li.active
-                %a{:href => "blog6.html"} Single Post Left Sidebar
-              %li
-                %a{:href => "blog7.html"} Single Post Double Sidebar
-          %li.dropdown
-            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-              Projects
+              Open Source
               %b.caret
             %ul.dropdown-menu
               %li
                 %a{:href => "http://sql2ar.herokuapp.com", 'target' => '_blank'} SQL2AR
               %li
-                %a{:href => "contact2.html"} Contact Page w/Map
+                %a{:href => "https://github.com/joofsh/geofsh", 'target' => "_blank"} Geofsh
               %li
-                %a{:href => "contact3.html"} Contact Page Map Variation
+                %a{:href => "https://github.com/joofsh/joofaq", 'target' => '_blank'} Joofaq
           - if current_user
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -49,4 +39,3 @@
                   = link_to "Articles Index", articles_path
                 %li
                   = link_to "Logout", logout_path
-
