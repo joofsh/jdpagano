@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap Responsive v2.3.1
  *
  * Copyright 2012 Twitter, Inc
@@ -801,14 +801,14 @@
 
 @media (max-width: 767px) {
   body {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 0px; /*default 20px*/
+    padding-left: 0px; /*default 20px*/
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: 0px; /*default -20px*/
+    margin-left: 0px; /*default -20px*/
   }
   .container-fluid {
     padding: 0;
@@ -895,6 +895,11 @@
   .modal.fade.in {
     top: 20px;
   }
+.Counter {
+	width:320px;
+	margin : 20px 0 20px 0;
+	border:none;
+}
 }
 
 @media (max-width: 480px) {
@@ -905,8 +910,7 @@
     display: block;
     line-height: 20px;
   }
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type=checkbox], input[type=radio] {
     border: 1px solid #ccc;
   }
   .form-horizontal .control-label {
@@ -947,6 +951,11 @@
   .carousel-caption {
     position: static;
   }
+.Counter {
+	width:320px;
+	margin : 20px 0 20px 0;
+	border:none;
+}
 }
 
 @media (max-width: 979px) {

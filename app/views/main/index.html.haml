@@ -1,4 +1,187 @@
-.body-content
+#welcomewrap
+  %h1 BLOG POST - LEFT SIDEBAR.
+.container
+  .row
+    %br/
+    / /////SIDEBAR/////
+    .span4.sidebar
+      / Categories
+      %h4.title-bg Categories
+      %ul.post-category-list
+        %li
+          %a{:href => "#"}
+            %i.icon-plus-sign>
+            Design
+        %li
+          %a{:href => "#"}
+            %i.icon-plus-sign>
+            Photoshop
+        %li
+          %a{:href => "#"}
+            %i.icon-plus-sign>
+            HTML
+        %li
+          %a{:href => "#"}
+            %i.icon-plus-sign>
+            Wordpress
+      %br/
+      %br/
+      / Popular Posts
+      %h4.title-bg Latest Posts
+      %ul.popular-posts
+        %li
+          %a{:href => "#"}
+            %img{:alt => "Popular Post", :src => "/assets/template/blog/thumb01.jpg"}/
+          %p
+            %a{:href => "#"} Lorem ipsum dolor sit amet consectetur adipiscing elit
+          %em Posted on 02/21/13
+        %li
+          %a{:href => "#"}
+            %img{:alt => "Popular Post", :src => "/assets/template/blog/thumb02.jpg"}/
+          %p
+            %a{:href => "#"} Lorem ipsum dolor sit amet consectetur adipiscing elit
+          %em Posted on 03/01/13
+        %li
+          %a{:href => "#"}
+            %img{:alt => "Popular Post", :src => "/assets/template/blog/thumb03.jpg"}/
+          %p
+            %a{:href => "#"} Lorem ipsum dolor sit amet consectetur adipiscing elit
+          %em Posted on 05/16/13
+      / Tabbed Content
+      %h4.title-bg More Info
+      %ul.nav.nav-tabs
+        %li.active
+          %a{"data-toggle" => "tab", :href => "#comments"} Comments
+        %li
+          %a{"data-toggle" => "tab", :href => "#tweets"} Tweets
+        %li
+          %a{"data-toggle" => "tab", :href => "#about"} About
+      .tab-content
+        #comments.tab-pane.active
+          %ul
+            %li
+              %i.icon-comment>
+              admin on
+              %a{:href => "#"} Project 1
+            %li
+              %i.icon-comment>
+              admin on
+              %a{:href => "#"} Project 2
+            %li
+              %i.icon-comment>
+              admin on
+              %a{:href => "#"} Project 3
+        #tweets.tab-pane
+          %ul
+            %li
+              %a{:href => "#"}
+                %i.icon-comment>
+                @Basicoh_
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            %li
+              %a{:href => "#"}
+                %i.icon-comment>
+                @Basicoh_
+              In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices.
+            %li
+              %a{:href => "#"}
+                %i.icon-comment>
+                @Basicoh_
+              Vivamus nec lectus sed orci molestie molestie.
+        #about.tab-pane
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices. Vivamus nec lectus sed orci molestie molestie.
+      %br/
+      / Video Widget
+      %h4.title-bg Video Widget
+      %iframe{:allowfullscreen => "", :frameborder => "0", :mozallowfullscreen => "", :src => "http://player.vimeo.com/video/44049449", :webkitallowfullscreen => "", :width => "100%"}
+      %br/
+      %br/
+    / /span4
+    .span8.blog
+      / Blog Post 1
+      %article
+        %h4.title-bg Post Title
+        .post-content
+          %a{:href => "#"}
+            %img{:alt => "Post Thumb", :src => "/assets/template/blog/blogbig01.jpg"}/
+          .post-body
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.
+            %p.well
+              %a{:href => "#", :rel => "tooltip", :title => "An important message"} Proin tristique
+              tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.
+            %p Nam sit amet felis non lorem faucibus rhoncus vitae id dui. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.
+            %blockquote
+              Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat.
+            %p Nam sit amet felis non lorem faucibus rhoncus vitae id dui.Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.
+          / post body
+          .post-summary-footer
+            %ul.post-data
+              %li
+                %i.icon-calendar
+                02/04/13
+              %li
+                %i.icon-user
+                %a{:href => "#"} Admin
+              %li
+                %i.icon-comment
+                %a{:href => "#"} 3 Comments
+              %li
+                %i.icon-tags
+                = succeed "," do
+                  %a{:href => "#"} photoshop
+                = succeed "," do
+                  %a{:href => "#"} design
+                %a{:href => "#"} wordpress
+          / post summary footer
+        / post content
+      / About the Author
+      %section.post-content
+        .post-body.about-author
+          %img{:alt => "author", :src => "/assets/template/pic2.jpg"}/
+          %h3 About Marcel Newman
+          %p Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget.
+        / post body
+      /
+        Post Comments
+        \==================================================
+      %section.comments
+        %h4.title-bg
+          %a{:name => "comments"}>
+          3 Comments so far
+        %ul
+          %li
+            / comment
+            %img{:alt => "Image", :src => "/assets/template/user-avatar.jpg"}/
+            %span.comment-name William Lawsons
+            %span.comment-date
+              January 11, 2013 |
+              %a{:href => "#"} Reply
+            .comment-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.
+            / Reply
+            %ul
+              %li
+                / comment reply
+                %img{:alt => "Image", :src => "/assets/template/user-avatar.jpg"}/
+                %span.comment-name Jack Daniells
+                %span.comment-date
+                  January 11, 2013 |
+                  %a{:href => "#"} Reply
+                .comment-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.
+              %li
+                / comment reply
+                %img{:alt => "Image", :src => "/assets/template/user-avatar.jpg"}/
+                %span.comment-name Jameson
+                %span.comment-date
+                  January 13, 2013 |
+                  %a{:href => "#"} Reply
+                .comment-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.
+
+
+
+
+
+
+-#.body-content
   .row
     .col-lg-3
       %h2 JD Pagano
