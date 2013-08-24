@@ -1,7 +1,8 @@
 / /////SIDEBAR/////
 .span4.sidebar
-  %h6 Software Engineer
-  %h4 Passionate Coder and Entrepreneur
+  %h2.title Software Engineer
+  %h4.caption Passionate Coder and Entrepreneur
+  %h4 Ruby, Rails, AngularJS
   .row-fluid
     .span5.offset2
       %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
@@ -18,7 +19,7 @@
         %i.icon-twitter.icon-3x
 
   / Popular Posts
-  %h4.title-bg Latest Posts
+  %h4.title-bg.recent-posts-title Latest Posts
   %ul.popular-posts
     - @articles[0..2].each do |a|
       %li
