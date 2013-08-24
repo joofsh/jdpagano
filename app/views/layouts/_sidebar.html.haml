@@ -27,8 +27,9 @@
           = image_tag a.image
         - else
           = image_tag 'grey-whale.png'
-        %p
-          = link_to a.body[0..100], article_path(a)
+        .title
+          %p= a.title
+
         %em
           = "Posted on #{a.printable_post_date}"
 

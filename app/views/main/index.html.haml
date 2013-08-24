@@ -12,8 +12,9 @@
               = preserve markdown(a.body)
             .post-summary-footer
               %ul.post-data
-                %li
-                  = link_to 'Edit', edit_article_path(a)
+                - if current_user
+                  %li
+                    = link_to 'Edit', edit_article_path(a)
                 %li
                   %i.icon-calendar
                     = a.printable_post_date
