@@ -53,6 +53,14 @@ Jdpagano::Application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
+  config.file_server_config =  {
+                                 :storage => :s3,
+                                 :bucket => "jdpagano",
+                                 :s3_credentials => {
+                                   :access_key_id => ENV['AWS_KEY'],
+                                   :secret_access_key => ENV['AWS_SECRET']
+                                 },
+                              }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"

@@ -1,10 +1,14 @@
 .span10.offset2
-  = form_for @article, html: {class: 'article-form'} do |f|
+  = form_for @article, html: {class: 'article-form', multipart: true} do |f|
     = f.label :title
     = f.text_field :title
 
+    = f.label :hero_image
+    = f.file_field :hero_image
+
     = f.label :body
     = f.text_area :body
+
 
     = f.submit "Submit", class: 'btn btn-success'
 

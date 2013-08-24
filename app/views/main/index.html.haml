@@ -6,8 +6,8 @@
         %article
           %h4.title-bg= a.title
           .post-content
-            -#- if a.image
-              = image_tag a.image
+            - if a.hero_image_file_name
+              = image_tag a.hero_image.url(:main)
             .post-body
               = preserve markdown(a.body)
             .post-summary-footer

@@ -30,8 +30,8 @@
     %ul.popular-posts
       - @articles[0..2].each do |a|
         %li
-          - if a.image
-            = image_tag a.image
+          - if a.hero_image_file_name
+            = image_tag a.hero_image(:thumbnail)
           - else
             = image_tag 'grey-whale.png'
           .title

@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    ap params
     @article = Article.find(params[:id])
 
     if @article.update_attributes(article_params)
@@ -49,6 +50,6 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.require(:article).permit(:title, :body, :image)
+    params.require(:article).permit(:title, :body, :hero_image)
   end
 end
