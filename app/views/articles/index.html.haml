@@ -1,6 +1,7 @@
 .container
-  - if flash[:notice]
-    = flash[:notice]
+  .flash-notice
+    - if flash[:notice]
+      %h2= flash[:notice]
 
   .row
     %h1 Articles
@@ -15,10 +16,10 @@
       - @articles.each do |a|
         %tr
           %td= a.title
-          %td= a.body[0..100]
-          %td= a.created_at
+          %td= a.body[0..25]
+          %td= a.printable_post_date
           %td= link_to "Edit", edit_article_path(a.id)
-          %td= link_to "Destroy", article_path(a.id)
+          %td= link_to "Destroy", article_path(a.id), method: :delete
 
 
 
