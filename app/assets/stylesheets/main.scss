@@ -71,6 +71,18 @@ a:hover {
       margin-bottom: 10px;
     }
   }
+  .contact-info {
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    a:hover {
+      background: inherit;
+    }
+    li {
+      margin-top: 10px;
+    }
+  }
+
   .recent-posts-title {
     margin-top: 10px;
   }

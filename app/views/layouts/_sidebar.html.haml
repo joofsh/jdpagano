@@ -4,32 +4,39 @@
   %h4.caption Passionate Coder and Entrepreneur
   %h4 Ruby, Rails, AngularJS
   .row-fluid
-    .span5.offset2
-      %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
-        %i.icon-envelope.icon-3x
-    .span5
-      %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
-        %i.icon-github-alt.icon-3x
-  .row-fluid
-    .span5.offset2
-      %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
-        %i.icon-linkedin.icon-3x
-    .span5
-      %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
-        %i.icon-twitter.icon-3x
+    %table.contact-info
+      %tbody
+        %tr
+          %td
+            %ul.nav.nav-list
+              %li
+                %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
+                  %i.icon-envelope.icon-3x
+              %li
+                %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
+                  %i.icon-linkedin.icon-3x
+          %td
+            %ul.nav.nav-list
+              %li
+                %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
+                  %i.icon-github-alt.icon-3x
+              %li
+                %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
+                  %i.icon-twitter.icon-3x
 
   / Popular Posts
-  %h4.title-bg.recent-posts-title Latest Posts
-  %ul.popular-posts
-    - @articles[0..2].each do |a|
-      %li
-        - if a.image
-          = image_tag a.image
-        - else
-          = image_tag 'grey-whale.png'
-        .title
-          %p= a.title
+  .row-fluid.hidden-phone
+    %h4.title-bg.recent-posts-title Latest Posts
+    %ul.popular-posts
+      - @articles[0..2].each do |a|
+        %li
+          - if a.image
+            = image_tag a.image
+          - else
+            = image_tag 'grey-whale.png'
+          .title
+            %p= a.title
 
-        %em
-          = "Posted on #{a.printable_post_date}"
+          %em
+            = "Posted on #{a.printable_post_date}"
 
