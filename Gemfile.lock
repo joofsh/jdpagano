@@ -94,8 +94,6 @@ GEM
     method_source (0.8.2)
     mime-types (1.24)
     minitest (4.7.5)
-    mongoid-paperclip (0.0.8)
-      paperclip (>= 2.3.6)
     moped (1.5.1)
     multi_json (1.7.9)
     nokogiri (1.5.10)
@@ -198,7 +196,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mongoid!
-  mongoid-paperclip
+  paperclip (~> 3.0)
   pry
   pry-byebug
   pygments.rb

@@ -8,7 +8,7 @@ gem 'bson_ext'
 gem 'thin'
 gem 'pygments.rb'
 gem 'redcarpet'
-gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 
 gem 'sass-rails', '~> 4.0.0'

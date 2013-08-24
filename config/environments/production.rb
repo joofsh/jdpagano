@@ -53,7 +53,7 @@ Jdpagano::Application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-  config.file_server_config =  {
+  config.paperclip_defaults =  {
                                  :storage => :s3,
                                  :bucket => "jdpagano",
                                  :s3_credentials => {
