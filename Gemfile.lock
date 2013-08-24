@@ -90,6 +90,7 @@ GEM
     multi_json (1.7.9)
     origin (1.1.0)
     polyglot (0.3.3)
+    posix-spawn (0.3.6)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -97,6 +98,9 @@ GEM
     pry-byebug (1.1.2)
       byebug (~> 1.6)
       pry (~> 0.9.12)
+    pygments.rb (0.5.2)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -121,6 +125,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (3.0.0)
     ref (1.0.5)
     sass (3.2.10)
     sass-rails (4.0.0)
@@ -160,6 +165,7 @@ GEM
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -176,8 +182,10 @@ DEPENDENCIES
   mongoid!
   pry
   pry-byebug
+  pygments.rb
   rails (= 4.0.0)
   rails_12factor
+  redcarpet
   sass-rails (~> 4.0.0)
   sdoc
   therubyracer

@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 gem 'bson_ext'
 gem 'thin'
+gem 'pygments.rb'
+gem 'redcarpet'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
