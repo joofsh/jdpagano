@@ -60,6 +60,7 @@ Jdpagano::Application.configure do
                                    :access_key_id => ENV['AWS_KEY'],
                                    :secret_access_key => ENV['AWS_SECRET']
                                  },
+                                 :s3_permissions => :public_read,
                               }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
