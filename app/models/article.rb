@@ -6,7 +6,7 @@ class Article
   field :title, type: String
   field :body, type: String, default: ''
 
-  has_mongoid_attached_file :hero_image, styles: { main: "700x300!", thumbnail: "100x75" }
+  has_mongoid_attached_file :hero_image, styles: { main: "770x300!", thumbnail: "100x75" }
 
 
   def printable_post_date
