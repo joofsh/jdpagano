@@ -3,7 +3,7 @@ class Article
   include Mongoid::Timestamps
 
   field :title, type: String
-  field :body, type: String
+  field :body, type: String, default: ''
   field :image, type: String
 
 
