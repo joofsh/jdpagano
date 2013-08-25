@@ -10,6 +10,7 @@ gem 'pygments.rb'
 gem 'redcarpet'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
+gem 'better_errors'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
