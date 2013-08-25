@@ -98,3 +98,15 @@ a:hover {
 .flash-notice {
   color: red;
 }
+
+// Article
+.title-bg {
+  a {
+    color: white !important;
+  }
+}
+.post-body {
+  p {
+    font-size: 16px;
+  }
+}
