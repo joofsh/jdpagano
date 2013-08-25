@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def show
+    @article = Article.find_by(slug: params[:slug])
+    redirect_to rooth_path unless @article
+  end
   def new
     @article = Article.new
   end
