@@ -7,7 +7,8 @@ Jdpagano::Application.routes.draw do
    get 'login' => 'sessions#new', as: 'login'
    get 'logout' => 'sessions#destroy', as: 'logout'
    resources :sessions
-   resources :articles
+   resources :articles, except: [:show]
+   get 'articles/:slug' => 'articles#show'
 
 
   # Example of regular route:
