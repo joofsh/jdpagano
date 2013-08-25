@@ -25,18 +25,19 @@
                   %i.icon-twitter.icon-3x
 
   / Popular Posts
-  .row-fluid.hidden-phone
-    %h4.title-bg.recent-posts-title Latest Posts
-    %ul.popular-posts
-      - @articles[0..2].each do |a|
-        %li
-          - if a.hero_image_file_name
-            = image_tag a.hero_image(:thumbnail)
-          - else
-            = image_tag 'grey-whale.png'
-          .title
-            %h4= a.title
+  - if @articles
+    .row-fluid.hidden-phone
+      %h4.title-bg.recent-posts-title Latest Posts
+      %ul.popular-posts
+        - @articles[0..2].each do |a|
+          %li
+            - if a.hero_image_file_name
+              = image_tag a.hero_image(:thumbnail)
+            - else
+              = image_tag 'grey-whale.png'
+            .title
+              %h4= a.title
 
-          %em
-            = "Posted on #{a.printable_post_date}"
+            %em
+              = "Posted on #{a.printable_post_date}"
 
