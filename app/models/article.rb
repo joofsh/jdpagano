@@ -7,6 +7,8 @@ class Article
   field :body, type: String, default: ''
   field :hero_image_file_name, type: String
   field :slug, type: String
+  field :keywords, type: Array
+
   index({ slug: 1 }, { unique: true, name: "slug_index" })
 
   before_save :generate_slug
