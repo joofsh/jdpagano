@@ -19,6 +19,11 @@ class Article
   has_attached_file :hero_image, styles: { main: "770x300!", thumbnail: "100x75" }
 
 
+  def body_preview
+    index = body.index("```") # finds the first block of code
+    body[0...index]
+  end
+
   def printable_post_date
     created_at.strftime("%m/%d/%y")
   end
