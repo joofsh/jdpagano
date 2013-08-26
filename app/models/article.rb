@@ -22,6 +22,9 @@ class Article
     created_at.strftime("%m/%d/%y")
   end
 
+  def printable_keywords
+    keywords.reject(&:blank?).map(&:capitalize).join(', ')
+  end
 private
   def generate_slug
     unless slug && !title
