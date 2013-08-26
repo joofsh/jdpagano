@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.require(:article).permit(:title, :body, :hero_image, :description, :keywords => [])
+    params.require(:article).permit(:title, :body, :hero_image, :description, :published, :keywords => [])
   end
 
   def setup_seo

@@ -1,5 +1,8 @@
 .span10.offset2
   = form_for @article, html: {class: 'article-form', multipart: true} do |f|
+    = f.label :published
+    = f.check_box :published, as: :boolean
+
     = f.label :title
     = f.text_field :title
 
