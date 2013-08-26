@@ -10,7 +10,7 @@
               = image_tag a.hero_image.url(:main)
             .post-body
               = preserve markdown(a.body)
-              %p= link_to 'Read More...', article_path(a.slug)
+              -#%p= link_to 'Read More...', article_path(a.slug)
             .post-summary-footer
               %ul.post-data
                 - if current_user
