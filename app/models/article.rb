@@ -7,7 +7,8 @@ class Article
   field :body, type: String, default: ''
   field :hero_image_file_name, type: String
   field :slug, type: String
-  field :keywords, type: Array
+  field :description, type: String
+  field :keywords, type: Array, default: [nil,nil,nil]
 
   index({ slug: 1 }, { unique: true, name: "slug_index" })
 
