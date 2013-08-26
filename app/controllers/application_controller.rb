@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless current_user
   end
 
+  def site_description
+    "Ruby, Rails, AngularJS, Design Patterns"
+  end
+  helper_method :site_description
 end
