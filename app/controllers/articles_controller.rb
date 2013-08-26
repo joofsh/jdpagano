@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find_by(slug: params[:slug])
+    setup_seo
     redirect_to rooth_path unless @article
   end
   def new
@@ -14,8 +15,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    ap article_params
     @article = Article.new(article_params)
-
     if @article.save
       flash[:notice] = 'Article Created!'
       redirect_to articles_path
@@ -30,9 +31,8 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    ap params
+    ap article_params
     @article = Article.find(params[:id])
-
     if @article.update_attributes(article_params)
       flash[:notice] = 'Article Updated!'
       redirect_to root_path
@@ -54,6 +54,15 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.require(:article).permit(:title, :body, :hero_image)
+    params.require(:article).permit(:title, :body, :hero_image, :description, :keywords => [])
+  end
+
+  def setup_seo
+    seo = {}
+    seo[:title] = @article.title
+    seo[:description] = @article.description if @article.description
+    seo[:keywords] = @article.keywords if @article.keywords
+    set_meta_tags seo
   end
 end
+
