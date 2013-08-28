@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :require_current_user
+  before_filter :require_current_user, except: [:show]
 
   def index
     @articles = Article.all
@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
     setup_seo
     redirect_to rooth_path unless @article
   end
+
+
   def new
     @article = Article.new
   end
