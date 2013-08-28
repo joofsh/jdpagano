@@ -9,7 +9,7 @@ class Article
   field :slug, type: String
   field :description, type: String
   field :keywords, type: Array, default: [nil,nil,nil]
-  field :published, type: Boolean, default: false
+  field :published, type: Mongoid::Boolean, default: false
 
   index({ slug: 1 }, { unique: true, name: "slug_index" })
 
