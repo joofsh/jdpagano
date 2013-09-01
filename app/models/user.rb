@@ -5,6 +5,7 @@ class User
   field :email, type: String
   field :password_digest, type: String
   field :password_salt, type: String
+  field :admin, type: Mongoid::Boolean, default: false
 
   attr_accessor :password
   before_save :encrypt_password
