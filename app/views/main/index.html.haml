@@ -21,4 +21,9 @@
                 %li
                   %i.icon-calendar
                     = a.printable_post_date
-
+                %li
+                  %i.icon-tags
+                    - a.keywords.each do |k|
+                      - unless k.blank?
+                        = succeed "," do
+                          %a= k
