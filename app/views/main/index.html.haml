@@ -13,7 +13,9 @@
               -#%p= link_to 'Read More...', article_path(a.slug)
             .post-summary-footer
               %ul.post-data
-                - if current_user
+                - unless a.published
+                  %li Not Published!
+                - if current_admin
                   %li
                     = link_to 'Edit', edit_article_path(a)
                 %li
