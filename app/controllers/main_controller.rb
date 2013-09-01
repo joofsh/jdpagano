@@ -1,5 +1,9 @@
 class MainController < ApplicationController
   def index
-    @articles = Article.where(published: true)
+    if current_admin
+      @articles = Article.all
+    else
+      @articles = Article.where(published: true)
+    end
   end
 end
