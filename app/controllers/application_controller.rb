@@ -9,8 +9,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  def require_current_user
-    redirect_to root_path unless current_user
+  def current_admin
+    current_user && current_user.admin?
+  end
+  helper_method :current_admin
+
+  def require_admin
+    redirect_to root_path unless current_user && current_user.admin?
   end
 
   def site_description
