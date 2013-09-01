@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :require_current_user, except: [:show]
+  before_filter :require_admin, except: [:show]
 
   def index
     @articles = Article.all
