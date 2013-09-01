@@ -23,7 +23,8 @@
                     = a.printable_post_date
                 %li
                   %i.icon-tags
-                    - a.keywords.each do |k|
-                      - unless k.blank?
-                        = succeed "," do
-                          %a= k
+                    - a.printable_keywords.each do |k|
+                      - seperator = (k == a.printable_keywords.last ? '' : ', ')
+                      = succeed seperator do
+                        %a= k
+

@@ -63,7 +63,7 @@ private
     seo = {}
     seo[:title] = @article.title
     seo[:description] = @article.description if @article.description
-    seo[:keywords] = @article.printable_keywords unless @article.printable_keywords.blank?
+    seo[:keywords] = @article.printable_keywords.join(', ') unless @article.printable_keywords.blank?
     set_meta_tags seo
   end
 end

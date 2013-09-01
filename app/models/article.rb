@@ -29,7 +29,7 @@ class Article
   end
 
   def printable_keywords
-    keywords.reject(&:blank?).map(&:capitalize).join(', ')
+    keywords.reject(&:blank?).map(&:capitalize)
   end
 private
   def generate_slug
