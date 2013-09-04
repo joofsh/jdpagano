@@ -6,4 +6,8 @@ class MainController < ApplicationController
       @articles = Article.where(published: true)
     end
   end
+
+  def missing
+    redirect_to root_path
+  end
 end
