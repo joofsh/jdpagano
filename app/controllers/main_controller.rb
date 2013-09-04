@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def index
     if current_admin
-      @articles = Article.all
+      @articles = Article.all.desc(:created_at)
     else
       @articles = Article.where(published: true)
     end
