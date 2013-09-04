@@ -3,7 +3,7 @@ class MainController < ApplicationController
     if current_admin
       @articles = Article.all.desc(:created_at)
     else
-      @articles = Article.where(published: true)
+      @articles = Article.where(published: true).desc(:created_at)
     end
   end
 
