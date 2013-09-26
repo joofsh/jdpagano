@@ -1,3 +1,4 @@
+
 .container
   .row
     = render 'layouts/sidebar'
@@ -17,4 +18,7 @@
               %li
                 %i.icon-calendar
                   = @article.printable_post_date
+      #disqus_thread
+
+= render partial: 'layouts/comments'
 
