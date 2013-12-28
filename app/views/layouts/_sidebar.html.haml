@@ -1,28 +1,29 @@
 / /////SIDEBAR/////
 .span4.sidebar
-  %h2.title Software Engineer
-  %h4.caption Passionate Coder and Entrepreneur
-  %h4= site_description
-  .row-fluid
-    %table.contact-info
-      %tbody
-        %tr
-          %td
-            %ul.nav.nav-list
-              %li
-                %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
-                  %i.icon-envelope.icon-3x
-              %li
-                %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
-                  %i.icon-linkedin.icon-3x
-          %td
-            %ul.nav.nav-list
-              %li
-                %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
-                  %i.icon-github-alt.icon-3x
-              %li
-                %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
-                  %i.icon-twitter.icon-3x
+  - if @blog.title == 'Tech'
+    %h2.title Software Engineer
+    %h4.caption Passionate Coder and Entrepreneur
+    %h4= site_description
+    .row-fluid
+      %table.contact-info
+        %tbody
+          %tr
+            %td
+              %ul.nav.nav-list
+                %li
+                  %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
+                    %i.icon-envelope.icon-3x
+                %li
+                  %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
+                    %i.icon-linkedin.icon-3x
+            %td
+              %ul.nav.nav-list
+                %li
+                  %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
+                    %i.icon-github-alt.icon-3x
+                %li
+                  %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
+                    %i.icon-twitter.icon-3x
 
   / Popular Posts
   - if @articles
