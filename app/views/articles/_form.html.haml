@@ -3,6 +3,9 @@
     = f.label :published
     = f.check_box :published, as: :boolean
 
+    = f.label :blog_id, 'Subdomain'
+    = f.collection_select :blog_id, Blog.all, :id, :title
+
     = f.label :title
     = f.text_field :title
 
