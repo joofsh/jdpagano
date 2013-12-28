@@ -11,6 +11,8 @@ class Article
   field :keywords, type: Array, default: [nil,nil,nil]
   field :published, type: Mongoid::Boolean, default: false
 
+  belongs_to :blog
+
   index({ slug: 1 }, { unique: true, name: "slug_index" })
 
   before_save :generate_slug
