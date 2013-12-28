@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :load_blog
+
 
   def current_user
     @user ||= User.find(session[:user_id]) if session[:user_id]
@@ -22,4 +24,10 @@ class ApplicationController < ActionController::Base
     "Ruby, Rails, AngularJS, Design Patterns"
   end
   helper_method :site_description
+
+
+  private
+  def load_blog
+    @blog = Blog.find_by(subdomain: request.subdomain)
+  end
 end
