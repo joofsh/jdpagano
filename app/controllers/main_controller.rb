@@ -1,10 +1,9 @@
 class MainController < ApplicationController
   def index
-    if current_admin
-      @articles = Article.all.desc(:created_at)
-    else
-      @articles = Article.where(published: true).desc(:created_at)
-    end
+    @articles = @blog.articles.desc(:created_at)
+
+    # Filter out un-published articles unless admin
+    @articles = @articles.where(published: true) unless current_admin
   end
 
   def missing
