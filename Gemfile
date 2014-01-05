@@ -2,16 +2,16 @@ source 'http://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
-gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
-gem 'bson_ext'
+gem 'rails', '4.0.1'
+gem 'mongoid', github: 'mongoid/mongoid'
 gem 'thin'
 gem 'pygments.rb'
 gem 'redcarpet'
-gem "paperclip", "~> 3.0"
+gem "paperclip", ">= 3.0"
 gem 'aws-sdk'
 gem 'better_errors'
 gem 'meta-tags', :require => 'meta_tags'
+gem 'binding_of_caller'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
