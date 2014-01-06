@@ -19,8 +19,8 @@ class Article
 
 
   has_attached_file :hero_image, styles: { main: "770x300!", thumbnail: "100x75" },
-    path: ":rails_root/public/system/:attachment/:id/:style/:filename",
-    url: "/system/:attachment/:id/:style/:filename"
+    path: ":rails_root/public/system/:class/:attachment/:id/:style/:filename",
+    url: "/system/:class/:attachment/:id/:style/:filename"
 
 
   def body_preview
