@@ -19,10 +19,10 @@
                   %li
                     = link_to 'Edit', edit_article_path(a)
                 %li
-                  %i.icon-calendar
+                  %i.fa.fa-calendar
                     = a.printable_post_date
                 %li
-                  %i.icon-tags
+                  %i.fa.fa-tags
                     - a.printable_keywords.each do |k|
                       - seperator = (k == a.printable_keywords.last ? '' : ', ')
                       = succeed seperator do
