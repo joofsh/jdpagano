@@ -10,6 +10,7 @@ class Article
   field :description, type: String
   field :keywords, type: Array, default: [nil,nil,nil]
   field :published, type: Mongoid::Boolean, default: false
+  field :first_published_at, type: DateTime
 
   belongs_to :blog
 

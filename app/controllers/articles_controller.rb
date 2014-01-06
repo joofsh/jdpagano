@@ -18,6 +18,8 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.first_published_at = Time.now if @article.published?
+
     if @article.save
       flash[:notice] = 'Article Created!'
       redirect_to articles_path
@@ -33,7 +35,11 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
+
     if @article.update_attributes(article_params)
+      @article.first_published_at = Time.now if @article.published? && @article.first_published_at.nil?
+      @article.save!
+
       flash[:notice] = 'Article Updated!'
       redirect_to root_path
     else
