@@ -6,9 +6,9 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find_by(slug: params[:slug])
+    @article = Article.where(slug: params[:slug]).first
+    return redirect_to root_path unless @article
     setup_seo
-    redirect_to rooth_path unless @article
   end
 
 
