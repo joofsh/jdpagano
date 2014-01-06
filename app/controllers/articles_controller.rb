@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    ap article_params
     @article = Article.new(article_params)
     if @article.save
       flash[:notice] = 'Article Created!'
@@ -33,7 +32,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    ap article_params
     @article = Article.find(params[:id])
     if @article.update_attributes(article_params)
       flash[:notice] = 'Article Updated!'
