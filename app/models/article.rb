@@ -19,7 +19,7 @@ class Article
   before_save :generate_slug
 
 
-  has_attached_file :hero_image, styles: { main: "770x300!", thumbnail: "100x75" },
+  has_attached_file :hero_image, styles: { main: "1170x400!", thumbnail: "100x75" },
     path: ":rails_root/public/system/:class/:attachment/:id/:style/:filename",
     url: "/system/:class/:attachment/:id/:style/:filename"
 
