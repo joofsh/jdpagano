@@ -1,23 +1,10 @@
 
 .container
   .row
-    = render 'layouts/sidebar'
-    .span8.blog
-      %article
-        %h4.title-bg= @article.title
-        .post-content
-          - if @article.hero_image_file_name
-            = image_tag @article.hero_image.url(:main)
-          .post-body
-            = preserve markdown(@article.body)
-          .post-summary-footer
-            %ul.post-data
-              - if current_user
-                %li
-                  = link_to 'Edit', edit_article_path(@article)
-              %li
-                %i.fa.fa-calendar
-                  = @article.printable_post_date
+    -#= render 'layouts/sidebar'
+    .span12.blog
+      = render partial: 'article', locals: {a: @article}
+
       #disqus_thread
 
 = render partial: 'layouts/comments'

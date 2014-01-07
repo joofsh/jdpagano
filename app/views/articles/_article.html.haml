@@ -1,0 +1,25 @@
+%article
+  %h4.title-bg= link_to a.title, article_path(a.slug)
+  .post-content
+    - if a.hero_image_file_name
+      = image_tag a.hero_image.url(:main)
+    .post-body
+      = preserve markdown(a.body)
+      -#%p= link_to 'Read More...', article_path(a.slug)
+    .post-summary-footer
+      %ul.post-data
+        - unless a.published
+          %li Not Published!
+        - if current_admin
+          %li
+            = link_to 'Edit', edit_article_path(a)
+        %li
+          %i.fa.fa-calendar
+            = a.printable_post_date
+        %li
+          %i.fa.fa-tags
+            - a.printable_keywords.each do |k|
+              - seperator = (k == a.printable_keywords.last ? '' : ', ')
+              = succeed seperator do
+                %a= k
+
