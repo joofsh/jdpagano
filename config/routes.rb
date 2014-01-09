@@ -1,7 +1,7 @@
 # Dynamically build regex including a zero-width negative lookahead for each subdomain we use
-#SUBDOMAINS = %w(tech travel) # array of all subdomains used
+SUBDOMAINS = %w(tech travel) # array of all subdomains used
+#SUBDOMAINS = Blog.pluck(:subdomain)
 
-SUBDOMAINS = Blog.pluck(:subdomain)
 subdomain_str = '|^(?!'
 SUBDOMAINS.each { |s| subdomain_str << "#{s}|" }
 subdomain_str = subdomain_str[0..-2]
