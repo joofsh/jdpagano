@@ -1,29 +1,6 @@
 / /////SIDEBAR/////
 .span4.sidebar
-  - if @blog.title == 'Tech'
-    %h2.title Software Engineer
-    %h4.caption Passionate Coder and Entrepreneur
-    %h4= site_description
-    .row-fluid
-      %table.contact-info
-        %tbody
-          %tr
-            %td
-              %ul.nav.nav-list
-                %li
-                  %a.mail{"href" => "mailto:jonathanpagano@gmail.com"}
-                    %i.fa.fa-envelope.fa-3x
-                %li
-                  %a.linkedin{"href" => "https://www.linkedin.com/in/jonathanpagano/", "target" => "_blank"}
-                    %i.fa.fa-linkedin.fa-3x
-            %td
-              %ul.nav.nav-list
-                %li
-                  %a.github{"href" => "https://github.com/joofsh", "target" => "_blank"}
-                    %i.fa.fa-github-alt.fa-3x
-                %li
-                  %a.twitter{"href" => "https://twitter.com/jdpagano", "target" => "_blank"}
-                    %i.fa.fa-twitter.fa-3x
+  = render partial: "layouts/sidebar/#{@blog.subdomain}"
 
   / Popular Posts
   - if @articles
