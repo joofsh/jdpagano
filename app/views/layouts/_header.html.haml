@@ -9,15 +9,11 @@
         %h6.pull-left JD Pagano
       .nav-collapse.collapse
         %ul.nav.pull-right
-          -#%li.dropdown
-            -#%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-              -#About Me
-              -#%b.caret
-            -#%ul.dropdown-menu
-              -#%li
-                -#%a{:href => "blog.html"} Blog Classic
-              -#%li
-                -#%a{:href => "blog2.html"} Blog Variation
+          - Blog.all.each do |b|
+            - if @blog.title != b.title
+              %li
+                = link_to "#{b.title} Blog", root_url(subdomain: b.subdomain)
+
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               Open Source
