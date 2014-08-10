@@ -18,7 +18,6 @@ Jdpagano::Application.routes.draw do
   # Removes the www. from the beginning of the request URL,
   # but maintains the rest of the subdomain if one exists
   constraints subdomain: /^www/ do
-    Rails.logger.info "Stripping www"
     get '(*any)' => redirect { |p, request| request.url.sub('www.','') }
   end
 
@@ -26,7 +25,6 @@ Jdpagano::Application.routes.draw do
   # Checks for a blank or non-Blog subdomain
   # If there is no subdomain or an invalid one, we redirect to the tech blog
   constraints subdomain: SUBDOMAIN_PATTERN do |p, req|
-    Rails.logger.info "no subdomain"
     get '(*any)' => redirect(subdomain: 'tech', path: '/%{any}/'), any: /.*/
   end
 
