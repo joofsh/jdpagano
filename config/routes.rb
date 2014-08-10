@@ -17,9 +17,10 @@ Jdpagano::Application.routes.draw do
 
   # Removes the www. from the beginning of the request URL,
   # but maintains the rest of the subdomain if one exists
-  constraints subdomain: /^www/ do
-    get '(*any)' => redirect { |p, request| request.url.sub('www.','') }
-  end
+
+  #constraints subdomain: /^www/ do
+    #get '(*any)' => redirect { |p, request| request.url.sub('www.','') }
+  #end
 
 
   # Checks for a blank or non-Blog subdomain
