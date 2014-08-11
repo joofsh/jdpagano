@@ -28,6 +28,8 @@ class ApplicationController < ActionController::Base
 
   private
   def load_blog
-    @blog = Blog.find_by(subdomain: request.subdomain)
+    subdomains = Blog.pluck(:subdomain)
+    subdomain = subdomains.include?(request.subdomain) ? request.subdomain : subdomains.first
+    @blog = Blog.find_by(subdomain: subdomain)
   end
 end
